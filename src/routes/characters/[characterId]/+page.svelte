@@ -1,6 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
-	import { characterMap, activePage, activeSheetSection } from '../../../store.js';
+	import { characterData, activePage, activeSheetSection, armorList } from '../../../store.js';
 	import { page } from '$app/stores';
 	import Sections from './Sections.svelte';
 	import Info from './Info.svelte';
@@ -17,9 +17,20 @@
 		promise = (() => {
 			// const res = await fetch(`/tutorial/api/album`);
 			// photos = await res.json();
-			if ($page.params.characterId in $characterMap) {
-				characterDetails = $characterMap[$page.params.characterId];
-			}
+				characterDetails = $characterData;				
+
+				if(characterDetails.armorEquipped) {
+					characterDetails.equippedArmor = $armorList.find((armor) => armor['name'] == characterDetails.armorEquipped);    
+				}
+				
+				if(characterDetails.shieldEquipped) {
+					characterDetails.equippedShield = $armorList.find((armor) => armor['name'] == characterDetails.shieldEquipped);    
+				}
+
+				characterDetails.adventuringGear.forEach(gear => {
+					gear.data = $armorList.find((armor) => armor['name'] == gear.name);
+				});
+
 			return;
 		})();
 	});

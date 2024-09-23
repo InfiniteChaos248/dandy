@@ -15,6 +15,11 @@
                 on:click={() => {
                     activePage.set('characters');
                 }}>Characters</a></li>
+			<li aria-current={$activePage == 'creator' ? 'page' : undefined}><a class="page"
+                href="/creator"
+                on:click={() => {
+                    activePage.set('creator');
+                }}>Character Creator</a></li>
             <li aria-current={$activePage == 'campaigns' ? 'page' : undefined}><a class="page"
                 href="/campaigns"
                 on:click={() => {

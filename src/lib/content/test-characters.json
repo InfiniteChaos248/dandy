@@ -1,0 +1,94 @@
+{
+    "list": [
+        {
+            "id": "c1",
+            "name": "Gandalf",
+            "level": "3",
+            "race": "Human",
+            "class": "Wizard"
+        },
+        {
+            "id": "c2",
+            "name": "Miss Stabby",
+            "level": "3",
+            "race": "Tiefling",
+            "class": "Rogue"
+        },
+        {
+            "id": "c2",
+            "name": "Nyan",
+            "level": "3",
+            "race": "Tabaxi",
+            "class": "Barbarian"
+        }
+    ],
+    "character": {
+        "id": "c1",
+        "name": "Amelia Frost",
+        "level": "1",
+        "race": "Human",
+        "class": "Cleric",
+        "proficiencyBonus": "+2",
+        "armorClass": 18,
+        "maximumHitPoints": 24,
+        "temporaryHitPoints": 0,
+        "hitPoints": 24,
+        "hitDie": "d8",
+        "attacksPerAttackAction": 1,
+        "abilityScores": {
+            "str": 13,
+            "dex": 10,
+            "con": 14,
+            "int": 8,
+            "wis": 18,
+            "cha": 8
+        },
+        "savingThrows": [
+            "wis",
+            "cha"
+        ],
+        "skillProficiencies": [
+            "athletics",
+            "insight",
+            "medicine",
+            "perception"
+        ],
+        "skillExpertise": [
+            "animal handling",
+            "sleight of hand"
+        ],
+        "coins": {
+            "copper": 10,
+            "silver": 10,
+            "electrum": 0,
+            "gold": 0,
+            "platinum": 20
+        },
+        "armorEquipped": "Scale Mail",
+        "equippedArmor": null,
+        "shieldEquipped": "Shield",
+        "equippedShield": null,
+        "adventuringGear": [
+            {
+                "id": 1,
+                "name": "Scale Mail",
+                "type": "armor",
+                "count": 1,
+                "weightInLb": 45,
+                "equippable": true,
+                "equipped": true,
+                "data": null
+            },
+            {
+                "id": 2,
+                "name": "Shield",
+                "type": "shield",
+                "count": 1,
+                "weightInLb": 6,
+                "equippable": true,
+                "equipped": true,
+                "data": null
+            }
+        ]
+    }
+}

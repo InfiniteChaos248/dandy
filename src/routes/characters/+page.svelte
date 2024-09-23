@@ -22,6 +22,11 @@ onMount(async () => {
 function characterIsClicked(characterId) {
     goto(`/characters/${characterId}`, false);
 }
+
+function plusIsClicked() {
+    goto('/creator', false);
+    activePage.set('creator');
+}
 </script>
 
 <div class="characters">
@@ -42,7 +47,11 @@ function characterIsClicked(characterId) {
 		<p>loading...</p>
 	{/each}
 
-    <div class="character" style="width: 10rem;">
+    <div class="character" style="width: 10rem;" on:click={() => {
+        plusIsClicked()
+    }} on:keydown={() => {
+        plusIsClicked()
+    }} role="button" tabindex=0>
         <div class="character-details">
             <h1>+</h1>
         </div>
